@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "format": "prettier --write .",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "postinstall": "node scripts/materialize-assets.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.3",
