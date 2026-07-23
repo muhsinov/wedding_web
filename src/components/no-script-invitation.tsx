@@ -46,8 +46,8 @@ export function NoScriptInvitation() {
         <section>
           <h2>{chapters.rsvp.title}</h2>
           <p>
-            JavaScript is required for the secure RSVP form. Please contact us
-            directly instead:
+            Xavfsiz RSVP shakli uchun JavaScript kerak. Hozircha biz bilan
+            to‘g‘ridan-to‘g‘ri bog‘lanishingiz mumkin:
           </p>
           {contacts.map((contact) => (
             <p key={contact.href}>

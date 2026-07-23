@@ -8,16 +8,16 @@ const display = localFont({
   src: "../assets/fonts/bodoni-moda.woff2",
   variable: "--font-display",
   weight: "400 900",
-  display: "optional",
-  preload: false,
+  display: "swap",
+  preload: true,
 });
 
 const body = localFont({
   src: "../assets/fonts/manrope.woff2",
   variable: "--font-body",
   weight: "200 800",
-  display: "optional",
-  preload: false,
+  display: "swap",
+  preload: true,
 });
 
 const accent = localFont({
@@ -76,8 +76,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7f3ec" },
-    { media: "(prefers-color-scheme: dark)", color: "#171214" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f0e7" },
+    { media: "(prefers-color-scheme: dark)", color: "#041219" },
   ],
 };
 
@@ -85,7 +85,23 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="uz" suppressHydrationWarning>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/uzbek-portal-desktop.webp"
+          type="image/webp"
+          media="(min-width: 721px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/uzbek-portal-mobile.webp"
+          type="image/webp"
+          media="(max-width: 720px)"
+        />
+      </head>
       <body
         className={`${display.variable} ${body.variable} ${accent.variable}`}
       >

@@ -4,11 +4,11 @@ import { rsvpSchema } from "@/features/rsvp/schema";
 describe("RSVP validation", () => {
   it("accepts a valid attending reply", () => {
     const result = rsvpSchema.safeParse({
-      guestName: "Sofia Bennett",
-      phone: "+39 055 123 4567",
+      guestName: "Dilnoza Karimova",
+      phone: "+998 90 123 45 67",
       attendanceStatus: "attending",
       guestCount: "2",
-      message: "Vegetarian, please.",
+      message: "Go‘shtsiz taom, iltimos.",
       website: "",
     });
     expect(result.success).toBe(true);
@@ -16,8 +16,8 @@ describe("RSVP validation", () => {
 
   it("requires at least one guest when attending", () => {
     const result = rsvpSchema.safeParse({
-      guestName: "Sofia Bennett",
-      phone: "+39 055 123 4567",
+      guestName: "Dilnoza Karimova",
+      phone: "+998 90 123 45 67",
       attendanceStatus: "attending",
       guestCount: "0",
       message: "",
@@ -28,8 +28,8 @@ describe("RSVP validation", () => {
 
   it("requires zero guests when declining", () => {
     const result = rsvpSchema.safeParse({
-      guestName: "Sofia Bennett",
-      phone: "+39 055 123 4567",
+      guestName: "Dilnoza Karimova",
+      phone: "+998 90 123 45 67",
       attendanceStatus: "declining",
       guestCount: "1",
       message: "",
@@ -40,8 +40,8 @@ describe("RSVP validation", () => {
 
   it("rejects bot honeypot submissions", () => {
     const result = rsvpSchema.safeParse({
-      guestName: "Sofia Bennett",
-      phone: "+39 055 123 4567",
+      guestName: "Dilnoza Karimova",
+      phone: "+998 90 123 45 67",
       attendanceStatus: "declining",
       guestCount: "0",
       message: "",

@@ -22,7 +22,7 @@ export async function submitRsvp(
   if (!parsed.success) {
     return {
       status: "error",
-      message: "Please review the highlighted details.",
+      message: "Iltimos, belgilangan ma’lumotlarni tekshiring.",
       fieldErrors: parsed.error.flatten().fieldErrors,
     };
   }
@@ -35,7 +35,7 @@ export async function submitRsvp(
     return {
       status: "error",
       message:
-        "RSVP is ready but Supabase has not been configured. Please contact the couple directly for now.",
+        "RSVP tayyor, ammo Supabase hali sozlanmagan. Hozircha yoshlar bilan bevosita bog‘laning.",
     };
   }
 
@@ -53,9 +53,9 @@ export async function submitRsvp(
     return {
       status: "duplicate",
       message:
-        "We already have a reply for this phone number. Contact the couple if you need to change it.",
+        "Bu telefon raqami orqali javob allaqachon yuborilgan. Uni o‘zgartirish uchun yoshlar bilan bog‘laning.",
       fieldErrors: {
-        phone: ["A reply using this phone number already exists."],
+        phone: ["Bu telefon raqami bilan javob allaqachon mavjud."],
       },
     };
   }
@@ -67,8 +67,7 @@ export async function submitRsvp(
     });
     return {
       status: "error",
-      message:
-        "Your reply could not be sent. Please wait a moment and try again.",
+      message: "Javobingiz yuborilmadi. Bir oz kutib, qayta urinib ko‘ring.",
     };
   }
 

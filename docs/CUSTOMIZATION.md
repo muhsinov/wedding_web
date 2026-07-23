@@ -115,7 +115,7 @@ Recommended delivery:
 - Gentle fade at loop boundaries
 - Under 2 MB when possible
 
-Audio starts only after the envelope click. Never attempt unmuted autoplay before visitor interaction.
+Audio starts only after the visitor activates the ceremonial seal. Never attempt unmuted autoplay before visitor interaction.
 
 ## Venue and map
 

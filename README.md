@@ -125,7 +125,9 @@ wedding_web/
 │   ├── audio/
 │   │   └── wedding-theme.mp3
 │   ├── images/
-│   │   └── opening-texture.webp
+│   │   ├── opening-texture.webp
+│   │   ├── uzbek-portal-desktop.webp
+│   │   └── uzbek-portal-mobile.webp
 │   └── icon.svg
 ├── src/
 │   ├── app/
@@ -191,7 +193,7 @@ No custom build command is required. Vercel uses `npm run build` automatically.
 
 ## Performance architecture
 
-The first scene is intentionally tiny and immediately paintable. Framer Motion, gallery behavior, the map, and the complete chapter experience are deferred until the visitor opens or skips the envelope. This keeps the prologue responsive while preserving rich motion after interaction.
+The first scene is intentionally dependency-light and immediately paintable. Framer Motion, gallery behavior, the map, and the complete chapter experience are deferred until the visitor opens or skips the ceremonial portal. Responsive WebP plates ensure desktop and mobile receive intentionally composed suzani artwork rather than a single compromised crop.
 
 Additional safeguards include:
 
@@ -224,7 +226,7 @@ Lighthouse scores depend on the final hosting region, images, analytics, and thi
 
 ## Media license
 
-The bundled music is **Starfield Romance** by Yoiyami, released under **CC0 1.0 Universal**. Attribution is not required, but the invitation includes a credit link in the closing scene.
+The bundled score is an original project mix of **Uzbekistan Traditional Popular Music with Dutor #001** by bassimat and **Starfield Romance** by Yoiyami. Both sources are released under **CC0 1.0 Universal**. The field-recorded dutor and voice provide the Uzbek ceremonial character; the ambient bed adds cinematic space.
 
 The editorial wedding images were generated specifically for this project. Replace them with the couple’s licensed photography before a real launch.
 

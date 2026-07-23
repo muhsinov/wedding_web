@@ -77,6 +77,10 @@ export interface WeddingConfig {
     opening: {
       eyebrow: string;
       action: string;
+      instruction: string;
+      ritualLine: string;
+      revealNote: string;
+      yearMark: string;
       skip: string;
       soundNote: string;
     };

@@ -7,15 +7,15 @@ export const rsvpSchema = z
     guestName: z
       .string()
       .trim()
-      .min(2, "Please enter your full name.")
-      .max(100, "Please keep your name under 100 characters."),
+      .min(2, "Iltimos, ism-familiyangizni kiriting.")
+      .max(100, "Ism-familiya 100 belgidan oshmasin."),
     phone: z
       .string()
       .trim()
-      .min(1, "Please enter a phone number.")
-      .refine(isPlausiblePhone, "Please enter a valid phone number."),
+      .min(1, "Iltimos, telefon raqamingizni kiriting.")
+      .refine(isPlausiblePhone, "Telefon raqamini to‘g‘ri kiriting."),
     attendanceStatus: z.enum(["attending", "declining"], {
-      required_error: "Please choose whether you can attend.",
+      required_error: "Iltimos, marosimga kelishingizni belgilang.",
     }),
     guestCount: z.coerce
       .number()
@@ -25,7 +25,7 @@ export const rsvpSchema = z
     message: z
       .string()
       .trim()
-      .max(600, "Please keep your note under 600 characters.")
+      .max(600, "Tilagingiz 600 belgidan oshmasin.")
       .optional()
       .or(z.literal("")),
     website: z.string().max(0).optional(),
@@ -35,14 +35,14 @@ export const rsvpSchema = z
       context.addIssue({
         code: z.ZodIssueCode.custom,
         path: ["guestCount"],
-        message: "Please include at least one guest.",
+        message: "Kamida bitta mehmonni kiriting.",
       });
     }
     if (value.attendanceStatus === "declining" && value.guestCount !== 0) {
       context.addIssue({
         code: z.ZodIssueCode.custom,
         path: ["guestCount"],
-        message: "Guest count must be zero when declining.",
+        message: "Bormasangiz, mehmonlar soni nol bo‘lishi kerak.",
       });
     }
   });

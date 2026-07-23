@@ -1,9 +1,19 @@
 "use client";
 
-import { Disc3, Pause, Play, Volume2, VolumeX } from "lucide-react";
+import { Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { m } from "framer-motion";
 import { weddingConfig } from "@/config/wedding.config";
 import { useAudioPlayer } from "@/components/providers/audio-provider";
+
+function DoiraMark() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="4.25" />
+      <path d="M12 3v4.75M12 16.25V21M3 12h4.75M16.25 12H21M5.64 5.64 9 9M15 15l3.36 3.36M18.36 5.64 15 9M9 15l-3.36 3.36" />
+    </svg>
+  );
+}
 
 export function MusicPlayer() {
   const {
@@ -23,7 +33,7 @@ export function MusicPlayer() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: hasStarted ? 1 : 0.72, y: 0 }}
       transition={{ duration: 0.7, delay: 0.4 }}
-      aria-label="Background music controls"
+      aria-label="Fon musiqasi boshqaruvi"
     >
       <button
         className="music-player__main"
@@ -36,10 +46,10 @@ export function MusicPlayer() {
             isPlaying ? "music-disc music-disc--playing" : "music-disc"
           }
         >
-          <Disc3 aria-hidden="true" />
+          <DoiraMark />
         </span>
         <span className="music-player__copy">
-          <span>{isPlaying ? "Now playing" : "A little atmosphere"}</span>
+          <span>{isPlaying ? "Hozir yangramoqda" : "Oqshom kayfiyati"}</span>
           <strong>{weddingConfig.music.title}</strong>
         </span>
         {isPlaying ? (

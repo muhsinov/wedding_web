@@ -13,7 +13,7 @@ export function ThemeToggle() {
     <button
       type="button"
       className="round-control"
-      aria-label={dark ? "Use light theme" : "Use dark theme"}
+      aria-label={dark ? "Yorug‘ mavzuga o‘tish" : "Tungi mavzuga o‘tish"}
       onClick={() => setTheme(dark ? "light" : "dark")}
     >
       <span className="round-control__icon">

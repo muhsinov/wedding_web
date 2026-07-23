@@ -41,7 +41,7 @@ export function ClosingSection({ onReplay }: { onReplay: () => void }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Music: {weddingConfig.music.artist}
+          Musiqa: {weddingConfig.music.artist}
         </a>
       </div>
     </footer>

@@ -31,20 +31,20 @@ function CountdownUnit({
 function Countdown() {
   const value = useCountdown(weddingConfig.event.date);
   if (value?.complete)
-    return <p className="countdown__complete">Today is the day.</p>;
+    return <p className="countdown__complete">Bugun — visol kuni.</p>;
   return (
     <div
       className="countdown"
       aria-label={weddingConfig.chapters.hero.countdownLabel}
       aria-live="off"
     >
-      <CountdownUnit value={value?.days ?? null} label="Days" />
+      <CountdownUnit value={value?.days ?? null} label="Kun" />
       <i aria-hidden="true" />
-      <CountdownUnit value={value?.hours ?? null} label="Hours" />
+      <CountdownUnit value={value?.hours ?? null} label="Soat" />
       <i aria-hidden="true" />
-      <CountdownUnit value={value?.minutes ?? null} label="Minutes" />
+      <CountdownUnit value={value?.minutes ?? null} label="Daqiqa" />
       <i aria-hidden="true" />
-      <CountdownUnit value={value?.seconds ?? null} label="Seconds" />
+      <CountdownUnit value={value?.seconds ?? null} label="Soniya" />
     </div>
   );
 }
@@ -96,7 +96,7 @@ export function HeroSection({ revealed }: { revealed: boolean }) {
         <h1
           id="hero-title"
           className="hero__names"
-          aria-label={`${weddingConfig.identity.partnerOne} and ${weddingConfig.identity.partnerTwo}`}
+          aria-label={`${weddingConfig.identity.partnerOne} va ${weddingConfig.identity.partnerTwo}`}
         >
           <m.span
             initial={{ opacity: 0, y: 90, rotate: 1.5 }}

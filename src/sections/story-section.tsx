@@ -59,9 +59,9 @@ export function StorySection() {
           />
         </Reveal>
         <Reveal delay={0.2} className="story__aside">
-          <span>Three moments</span>
+          <span>Uch muhim lahza</span>
           <i aria-hidden="true" />
-          <span>One unfolding life</span>
+          <span>Bir umrga yoyilgan hikoya</span>
         </Reveal>
       </div>
       <div className="story__scenes page-shell">

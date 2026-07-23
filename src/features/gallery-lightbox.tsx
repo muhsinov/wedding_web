@@ -68,7 +68,7 @@ export function GalleryLightbox({
           className="lightbox"
           role="dialog"
           aria-modal="true"
-          aria-label={`Image ${activeIndex + 1} of ${images.length}: ${activeImage.caption}`}
+          aria-label={`${images.length} rasmdan ${activeIndex + 1}-rasm: ${activeImage.caption}`}
           tabIndex={-1}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -79,7 +79,7 @@ export function GalleryLightbox({
             className="lightbox__close"
             type="button"
             onClick={onClose}
-            aria-label="Close gallery"
+            aria-label="Galereyani yopish"
           >
             <X aria-hidden="true" />
           </button>
@@ -123,18 +123,18 @@ export function GalleryLightbox({
               onClick={() =>
                 onChange((activeIndex - 1 + images.length) % images.length)
               }
-              aria-label="Previous image"
+              aria-label="Oldingi rasm"
             >
               <ArrowLeft aria-hidden="true" />
-              <span>Previous</span>
+              <span>Oldingi</span>
             </button>
             <i aria-hidden="true" />
             <button
               type="button"
               onClick={() => onChange((activeIndex + 1) % images.length)}
-              aria-label="Next image"
+              aria-label="Keyingi rasm"
             >
-              <span>Next</span>
+              <span>Keyingi</span>
               <ArrowRight aria-hidden="true" />
             </button>
           </div>

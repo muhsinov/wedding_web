@@ -12,7 +12,10 @@ const InvitationChapters = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="chapters-loading" aria-label="Preparing the invitation" />
+      <div
+        className="chapters-loading"
+        aria-label="Taklifnoma tayyorlanmoqda"
+      />
     ),
   },
 );

@@ -61,7 +61,7 @@ function SuccessRitual({
         >
           <span>{weddingConfig.identity.monogram}</span>
           <i />
-          <small>{firstName ? `With love, ${firstName}` : "With love"}</small>
+          <small>{firstName ? `Mehr bilan, ${firstName}` : "Mehr bilan"}</small>
         </m.div>
         <m.div
           className="success-letter__envelope"
@@ -234,7 +234,7 @@ export function RsvpSection() {
           <div className="guest-count">
             <div>
               <label htmlFor="guestCount">{copy.labels.guests}</label>
-              <small>Including yourself</small>
+              <small>O‘zingiz bilan birga</small>
             </div>
             <div className="guest-count__control">
               <button
@@ -248,7 +248,7 @@ export function RsvpSection() {
                   )
                 }
                 disabled={attendance === "declining" || guestCount <= 1}
-                aria-label="Remove one guest"
+                aria-label="Bitta mehmonni kamaytirish"
               >
                 <Minus aria-hidden="true" />
               </button>
@@ -267,7 +267,7 @@ export function RsvpSection() {
                 disabled={
                   attendance === "declining" || guestCount >= copy.maxGuests
                 }
-                aria-label="Add one guest"
+                aria-label="Bitta mehmon qo‘shish"
               >
                 <Plus aria-hidden="true" />
               </button>
@@ -277,7 +277,7 @@ export function RsvpSection() {
           <div className="form-field form-field--wide">
             <label htmlFor="message">
               {copy.labels.message}
-              <span>Optional</span>
+              <span>Ixtiyoriy</span>
             </label>
             <textarea
               id="message"
@@ -315,7 +315,8 @@ export function RsvpSection() {
             <i aria-hidden="true" />
           </button>
           <p className="rsvp-form__privacy">
-            Your details are used only to coordinate this celebration.
+            Ma’lumotlaringiz faqat ushbu marosimni tashkil etish uchun
+            ishlatiladi.
           </p>
           <AnimatePresence>
             {pending ? (
@@ -326,7 +327,7 @@ export function RsvpSection() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <span>Folding your reply with care…</span>
+                <span>Javobingiz ehtirom bilan muhrlanmoqda…</span>
                 <i aria-hidden="true" />
               </m.div>
             ) : null}

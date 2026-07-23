@@ -19,11 +19,11 @@ export function SiteHeader({ visible }: { visible: boolean }) {
       <a
         href="#invitation"
         className="site-header__monogram"
-        aria-label="Back to the beginning"
+        aria-label="Boshiga qaytish"
       >
         {weddingConfig.identity.monogram}
       </a>
-      <nav aria-label="Invitation chapters">
+      <nav aria-label="Taklifnoma bo‘limlari">
         {weddingConfig.navigation.map((item) => (
           <a key={item.href} href={item.href}>
             {item.label}

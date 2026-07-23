@@ -5,9 +5,9 @@
 The application separates the first cinematic impression from the heavier invitation chapters.
 
 1. `src/app/page.tsx` is a Server Component. It emits Event JSON-LD, configuration-derived theme variables, and the invitation shell.
-2. `WeddingExperience` is the small client orchestrator for the envelope state.
+2. `WeddingExperience` is the small client orchestrator for the ceremonial portal state.
 3. `OpeningSequence` paints immediately and contains no Framer Motion dependency.
-4. Opening the envelope starts audio, begins loading `InvitationChapters`, and keeps the envelope animation in front while the chapter bundle becomes ready.
+4. Breaking the gold seal starts audio, begins loading `InvitationChapters`, and keeps the suzani portal choreography in front while the chapter bundle becomes ready.
 5. `InvitationChapters` is dynamically loaded after interaction and introduces the shared `MotionProvider`.
 6. The gallery lightbox is split again and loaded only when a photograph is opened.
 7. The Google Map iframe is created only after the visitor requests it.

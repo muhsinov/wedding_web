@@ -21,7 +21,7 @@ export function InvitationChapters({ onReplay }: { onReplay: () => void }) {
         data-motion-intensity={weddingConfig.theme.motion.intensity}
       >
         <a className="skip-link" href="#story">
-          Skip to the story
+          Hikoyaga o‘tish
         </a>
         <SiteHeader visible />
         <div className="experience">

@@ -57,7 +57,7 @@ function GalleryArtwork({
         delay: (index % 3) * 0.07,
         ease: [0.22, 1, 0.36, 1],
       }}
-      aria-label={`Open image: ${image.caption}`}
+      aria-label={`Rasmni ochish: ${image.caption}`}
     >
       <m.span
         className="gallery-artwork__image"
@@ -125,9 +125,9 @@ export function GallerySection() {
         ))}
       </div>
       <div className="gallery__footer page-shell">
-        <span>Private collection</span>
+        <span>Shaxsiy to‘plam</span>
         <i aria-hidden="true" />
-        <span>Eight photographs</span>
+        <span>Sakkiz xotira</span>
       </div>
       <GalleryLightbox
         images={weddingConfig.gallery}

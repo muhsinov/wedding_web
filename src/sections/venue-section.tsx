@@ -64,7 +64,7 @@ export function VenueSection() {
           animate={{ opacity: 1, y: 0 }}
         >
           <iframe
-            title={`Map to ${copy.name}`}
+            title={`${copy.name} manzili xaritasi`}
             src={copy.mapEmbedUrl}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

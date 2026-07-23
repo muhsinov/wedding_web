@@ -6,7 +6,7 @@ export default function Home() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Event",
-    name: `${weddingConfig.identity.partnerOne} & ${weddingConfig.identity.partnerTwo} Wedding`,
+    name: `${weddingConfig.identity.partnerOne} & ${weddingConfig.identity.partnerTwo} nikoh oqshomi`,
     description: weddingConfig.seo.description,
     startDate: weddingConfig.event.date,
     eventStatus: "https://schema.org/EventScheduled",

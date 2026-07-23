@@ -15,9 +15,9 @@ export default function OpenGraphImage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          color: "#201b18",
+          color: "#f8e8c2",
           background:
-            "linear-gradient(135deg, #f8f3ea 0%, #fffdf8 48%, #ead6d2 100%)",
+            "radial-gradient(circle at 50% 52%, #174b53 0%, #071f2a 42%, #02080d 100%)",
           position: "relative",
           fontFamily: "serif",
         }}
@@ -26,7 +26,19 @@ export default function OpenGraphImage() {
           style={{
             position: "absolute",
             inset: 28,
-            border: "1px solid rgba(154,113,56,.55)",
+            border: "1px solid rgba(213,173,109,.48)",
+            display: "flex",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: 142,
+            bottom: -150,
+            width: 916,
+            height: 690,
+            border: "1px solid rgba(213,173,109,.28)",
+            borderRadius: "50% 50% 0 0 / 38% 38% 0 0",
             display: "flex",
           }}
         />
@@ -38,7 +50,7 @@ export default function OpenGraphImage() {
             letterSpacing: 8,
             fontSize: 15,
             textTransform: "uppercase",
-            color: "#8b693d",
+            color: "#d5ad6d",
           }}
         >
           {weddingConfig.event.displayDate}
@@ -58,7 +70,7 @@ export default function OpenGraphImage() {
               margin: "-16px 0",
               fontSize: 52,
               fontStyle: "italic",
-              color: "#9a7138",
+              color: "#d1a85f",
             }}
           >
             &amp;
@@ -75,10 +87,10 @@ export default function OpenGraphImage() {
             letterSpacing: 5,
             fontSize: 14,
             textTransform: "uppercase",
-            color: "#8b693d",
+            color: "#d5ad6d",
           }}
         >
-          Florence · Italy
+          Toshkent · O‘zbekiston
         </div>
       </div>
     ),
